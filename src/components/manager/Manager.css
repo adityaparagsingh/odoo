@@ -1,0 +1,28 @@
+.manager-dashboard {
+  padding: 2rem;
+}
+.manager-dashboard h1 {
+  margin-bottom: 2rem;
+}
+.manager-dashboard table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.manager-dashboard th, .manager-dashboard td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+.manager-dashboard button {
+  background: #3a77f7;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.manager-dashboard button:disabled {
+  background: #aaa;
+}
