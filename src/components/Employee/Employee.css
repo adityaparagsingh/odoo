@@ -1,0 +1,189 @@
+/* Overall Dashboard Layout */
+.employee-dashboard {
+  background-color: #f0f6ff; /* soft blue background */
+  height: 80vh;
+  width: 60vw;
+  padding: 2rem;
+  border-radius: 15px;
+  font-family: 'Inter', sans-serif;
+  color: #1e3a8a; /* deep blue text */
+  transition: background 0.3s ease;
+}
+
+/* Header */
+.employee-dashboard h1 {
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e40af;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+/* Expense Form */
+.expense-form {
+  display: flex;
+  flex-direction: column;
+  width: 750px;   /* wider */
+  background-color: #ffffff;
+  padding: 1.2rem;    /* reduced padding for less height */
+  border-radius: 16px; /* smoother rounded corners */
+  box-shadow: 0 3px 14px rgba(30, 64, 175, 0.12);
+  margin: 0 auto 2rem auto;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.expense-form:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(30, 64, 175, 0.18);
+}
+
+.expense-form h2 {
+  text-align: center;
+  color: #1e40af;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Inputs & Selects */
+.expense-form input,
+.expense-form select,
+.expense-form button {
+  margin-bottom: 0.9rem;
+  padding: 0.65rem;   /* reduced height */
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.expense-form input:focus,
+.expense-form select:focus {
+  border-color: #3b82f6;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Submit Button */
+.expense-form button {
+  background-color: #1d4ed8;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.expense-form button:hover {
+  background-color: #2563eb;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  transform: translateY(-2px);
+}
+
+.expense-form button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Expense History */
+.employee-dashboard table {
+  width: 95%;
+  margin: auto;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 3px 14px rgba(30, 64, 175, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.employee-dashboard table:hover {
+  box-shadow: 0 5px 20px rgba(30, 64, 175, 0.15);
+}
+
+.employee-dashboard th,
+.employee-dashboard td {
+  border: 1px solid #e2e8f0;
+  padding: 0.6rem 0.9rem; /* reduced height */
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.employee-dashboard th {
+  background-color: #e0ecff;
+  color: #1e40af;
+  font-weight: 600;
+}
+
+.employee-dashboard tr:nth-child(even) {
+  background-color: #f9fafb;
+  transition: background 0.2s ease;
+}
+
+.employee-dashboard tr:hover {
+  background-color: #f1f5ff;
+}
+
+/* Status Summary Cards */
+.expense-status-summary {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.expense-status-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #ffffff;
+  border-radius: 16px; /* more rounded */
+  box-shadow: 0 3px 14px rgba(30, 64, 175, 0.1);
+  padding: 14px 20px; /* reduced height */
+  min-width: 180px;   /* increased width */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.expense-status-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 6px 18px rgba(30, 64, 175, 0.18);
+}
+
+.expense-status-card .status-icon {
+  font-size: 2rem;
+  margin-right: 12px;
+  transition: transform 0.2s ease;
+}
+
+.expense-status-card:hover .status-icon {
+  transform: rotate(8deg) scale(1.1);
+}
+
+.status-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.status-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-top: 4px;
+  transition: color 0.2s ease;
+}
+
+/* Color accents for each status */
+.expense-status-card.pending .status-icon {
+  color: #eab308;
+}
+
+.expense-status-card.approved .status-icon {
+  color: #22c55e;
+}
+
+.expense-status-card.rejected .status-icon {
+  color: #ef4444;
+}
