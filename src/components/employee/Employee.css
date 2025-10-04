@@ -1,0 +1,27 @@
+.employee-dashboard {
+  padding: 2rem;
+}
+.employee-dashboard h1 {
+  margin-bottom: 2rem;
+}
+.expense-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+.expense-form input, .expense-form select, .expense-form button {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.employee-dashboard table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.employee-dashboard th, .employee-dashboard td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
