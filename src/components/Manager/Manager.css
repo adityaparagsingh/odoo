@@ -1,0 +1,158 @@
+body {
+  background: linear-gradient(135deg, #2e66ff, #00c9a7);
+  margin: 0;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Dashboard Layout */
+.manager-dashboard {
+  background-color: #ffffff;
+  max-width: 1100px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 2rem 3rem;
+  color: #1e3a8a;
+  box-shadow: 0 15px 40px rgba(30, 64, 175, 0.15);
+  animation: fadeIn 0.6s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+
+.section-card {
+  background-color: #f9fbff;
+  border-radius: 14px;
+  padding: 1.5rem 2rem;
+  box-shadow: none; /* ✅ remove multiple shadows */
+  border: 1px solid #e6ebf5; /* light separation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.08);
+}
+
+/* Headings */
+.manager-dashboard h2 {
+  font-size: 1.5rem;
+  color: #1e3a8a;
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.manager-dashboard h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #2563eb;
+  margin: 0.5rem auto;
+  border-radius: 2px;
+}
+
+/* Tables */
+.section-card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.08);
+}
+
+.section-card th,
+.section-card td {
+  border: 1px solid #e2e8f0;
+  padding: 0.9rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.section-card th {
+  background-color: #e0ecff;
+  color: #1e40af;
+  font-weight: 600;
+}
+
+.section-card tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.section-card tr:hover {
+  background-color: #f1f5ff;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 2px solid transparent;
+  text-transform: capitalize;
+}
+
+.status-badge.pending {
+  background: #fff9db;
+  color: #b45309;
+  border-color: #fcd34d;
+}
+
+.status-badge.approved {
+  background: #e6fffa;
+  color: #047857;
+  border-color: #34d399;
+}
+
+.status-badge.rejected {
+  background: #ffe4e6;
+  color: #b91c1c;
+  border-color: #f87171;
+}
+
+/* Buttons */
+button {
+  background: #1d4ed8;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+button:hover:not(:disabled) {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+button:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
