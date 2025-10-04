@@ -1,0 +1,157 @@
+/* Overall Layout */
+body {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Dashboard Container */
+.admin-dashboard {
+  background-color: #ffffff;
+  max-width: 1100px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 2rem 3rem;
+  color: #1e3a8a;
+  box-shadow: 0 12px 30px rgba(30, 64, 175, 0.25);
+  animation: fadeIn 0.6s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Section Cards */
+.admin-section-card {
+  background-color: #f8faff;
+  border-radius: 15px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 14px rgba(30, 64, 175, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease-in-out;
+}
+
+.admin-section-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.2);
+}
+
+/* Headers */
+.admin-dashboard h1,
+.admin-dashboard h2 {
+  text-align: center;
+  color: #1e40af;
+  font-weight: 700;
+}
+
+.admin-dashboard h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.admin-dashboard h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+/* Tables */
+.admin-dashboard table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(30, 64, 175, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.admin-dashboard th,
+.admin-dashboard td {
+  border: 1px solid #e2e8f0;
+  padding: 0.8rem 1rem;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.admin-dashboard th {
+  background-color: #e0ecff;
+  color: #1e40af;
+  font-weight: 600;
+  text-align: center;
+}
+
+.admin-dashboard tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.admin-dashboard tr:hover {
+  background-color: #f1f5ff;
+  transition: background 0.2s ease;
+}
+
+/* Buttons */
+.admin-dashboard button {
+  background: #1d4ed8;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.admin-dashboard button:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.admin-dashboard button:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* Inputs & Selects */
+.admin-dashboard input[type="text"],
+.admin-dashboard input[type="email"],
+.admin-dashboard input[type="number"],
+.admin-dashboard select {
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.95rem;
+  margin-right: 0.5rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.admin-dashboard input:focus,
+.admin-dashboard select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 6px rgba(37, 99, 235, 0.3);
+  outline: none;
+}
+
+/* Radio Buttons */
+.admin-dashboard input[type="radio"] {
+  accent-color: #2563eb;
+  transform: scale(1.2);
+  margin-right: 0.4rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
