@@ -1,0 +1,12 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #fafcff;
+  margin: 0;
+  padding: 0;
+}
+h1, h2 {
+  color: #2C3E50;
+}
+table {
+  margin-bottom: 2rem;
+}
